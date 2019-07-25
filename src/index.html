@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contract Test Page</title>
+  <style>
+    button,
+    .testButton {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Blockchain Smart Contract Test Page</h1>
+  <hr>
+
+  <h3>Test Getting list of features from the chain</h3>
+  <h4>Calling: App.refreshAircraftFeatureList()</h4>
+  <button onclick="App.refreshAircraftFeatureList()">Execute</button>
+  <hr>
+
+  <h3>Test Adding new feature</h3>
+  <h4>Calling: App.handleAddAircraftFeature()</h4>
+  <form id="addFeatureForm">
+    Feature Id: <input type="text" id="featureId" value="1"></input>
+    <br>
+    Model Id: <input type="text" id="modelId" value="1"></input>
+    <br>
+    Feature Description: <input type="text" id="featureDescription" value="Test feature description."></input>
+    <br>
+    <a href="javascript:TApp.randomizeAddFeatureForm()">Random</a>
+    <br>
+    <br>
+    <button type="submit">Execute</button>
+  </form>
+  <hr>
+
+  <h3>Test Adding Training Program</h3>
+  <h4>Calling: App.handleAddTrainingProgram()</h4>
+  <form id="addTrainingProgramForm">
+    Program Id: <input type="text" id="programId1" value="1"></input>
+    <br>
+    Feature Id: <input type="text" id="featureId1" value="1"></input>
+    <br>
+    Feature Description: <input type="text" id="featureDescription1" value="Test feature description."></input>
+    <br>
+    <a href="javascript:TApp.randomizeAddTrainingProgramForm()">Random</a>
+    <br>
+    <br>
+    <button type="submit">Execute</button>
+  </form>
+  <hr>
+
+  <h3>Test Approve Certification</h3>
+  <h4>Calling: App.handleApproveCertification()</h4>
+  <form id="approveCertificationForm">
+    Certification Id: <input type="text" id="certificationId" value="1"></input>
+    <br>
+    Pilot Id: <input type="text" id="pilotId" value="1"></input>
+    <br>
+    Feature Id: <input type="text" id="featureId2" value="1"></input>
+    <br>
+    Date: <input type="text" id="date" value="3/3/2019"></input>
+    <br>
+    <a href="javascript:TApp.randomizeApproveCertificationForm()">Random</a>
+    <br>
+    <br>
+    <button type="submit">Execute</button>
+  </form>
+  <hr>
+
+  <h3>Test Check Certification</h3>
+  <h4>Calling: App.handleCheckCertification()</h4>
+  <form id="checkCertificationForm">
+    Pilot Id: <input type="text" id="pilotId3" value="1"></input>
+    <br>
+    Feature Id: <input type="text" id="featureId3" value="1"></input>
+    <br>
+    <a href="javascript:TApp.randomizeCheckCertificationForm()">Random</a>
+    <br>
+    <br>
+    <button type="submit">Execute</button>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/test.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Federal Aviation Administration</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css"
+    rel="stylesheet" media="screen,projection" />
+  <script id="table-template" type="text/x-handlebars-template">
+    <li class="collection-item">
+      <div>
+        <b>{{name}} | Feature Id: {{featureId}}</b>
+        <a data-modelid="{{modelId}}" data-name="{{name}}" class="secondary-content modal-trigger alertBtn"><i class="material-icons">add_alert</i></a>
+      </div>
+    </li> 
+  </script>
+  <style>
+    .bottomToast {
+      top: 500px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="purple" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Federal Aviation Administration</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 class="center-align">Aircraft Models and Features</h2>
+    <ul class="collection">
+    </ul>
+
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/faa.js"></script>
+</body>
+
+</html>
